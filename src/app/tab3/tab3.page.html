@@ -9,20 +9,101 @@
 <ion-content>
 
   <ion-item>
-    <ion-label position="floating">Numero de computadores (Q0):</ion-label>
+    <ion-label position="floating">Numero de computadores <br> inicialmente infectados (Q0): <br></ion-label>
     <ion-input type="number" id="Q0" [(ngModel)]="Q0"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label position="floating">Numero de horas (n):</ion-label>
+    <ion-label position="floating">Numero de horas inicial (t1):</ion-label>
+    <ion-input type="number" id="t1" [(ngModel)]="t1"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Numero de computadores <br> infectados en (t1) (i):</ion-label>
+    <ion-input type="number" id="i" [(ngModel)]="i"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Numero de horas de infección: (n)</ion-label>
     <ion-input type="number" id="n" [(ngModel)]="n"></ion-input>
   </ion-item>
 
-<br><br><br>
+  <br><br><br>
 
-<ion-button expand="block" color="danger" (click)="operacion()">CALCULAR</ion-button>
-    <ion-label >Computadores infectados (Q2):</ion-label>
+  <ion-button expand="block" color="danger" (click)="operacion()">CALCULAR</ion-button>
 
-    el resultado es {{ Q2 }} y el otro es {{ res }}
-  
+  <ion-card [hidden]=ishidden>
+    <ion-card-header>
+      <ion-card-title>RESULTADO</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      El resultado es: {{ Q2 }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card [hidden]=ishidden>
+    <ion-card-header>
+      <ion-card-title>DATOS</ion-card-title>
+      <ion-card-subtitle>Los datos del ejercicio son:</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Cantidad de computadores inicialmente infectados (Q0): {{ Q0 }} <br>
+      Cantidad de horas transcurridas inicialmente (t1): {{ t1 }}<br>
+      Cantidad de computadores infectados en t1 (i): {{ i }}<br>
+      Cantidad de horas de transmision de virus (n): {{ n }}<br>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card [hidden]=ishidden>
+    <ion-card-header>
+      <ion-card-title>PROCESO</ion-card-title>
+      <ion-card-subtitle>Los resultados de cada operación son:</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-card-title>
+        <ion-label color="primary"><b>Aplicamos leyes de los exponentes: a^(bc) = (a^b)^c</b></ion-label>
+      </ion-card-title> <br>
+      El resultado quedaria: e^(ln({{ i }})^{{ n }})
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card [hidden]=ishidden>
+    <ion-card-content>
+      <ion-card-title>
+        <ion-label color="success"><b>Aplicamos propiedades de los logaritmos: e^(ln(b)) = b</b></ion-label>
+      </ion-card-title><br>
+      <ion-card-subtitle>El resultado quedaria: {{ i }}^{{ n }}</ion-card-subtitle><br>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card [hidden]=ishidden>
+    <ion-card-content>
+      <ion-label color="danger"><b>Resultado de {{ i }} ^ {{ n }}:</b></ion-label> {{ resultadoE }}<br>
+      <ion-label color="danger"><b>Resultado de la multiplicacion de {{  Q0  }} por el resultado por
+          {{ resultadoE }}:</b></ion-label> {{ Q0E }}<br>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card [hidden]=ishidden>
+    <ion-card-header>
+      <ion-card-title>Ejercicio</ion-card-title>
+      <ion-card-subtitle>Ejercicio propuesto por internet:</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      "En un principio existen 1000 computadores infectados con cierto virus altamente transferible por cualquier medio.
+      si el numero de computadores infectados se duplica después de una hora y media, indique cual es el numero total de
+      equipos infectados" <br> <br>
+      <img src="../../assets/img/imagen.png" alt="">
+      <br><br>
+      <hr>
+
+      <i> Tomado del link: https://www.youtube.com/watch?v=sKOHbx4UPTI </i>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

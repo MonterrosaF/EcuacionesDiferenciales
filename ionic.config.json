@@ -1,5 +1,7 @@
 {
   "name": "EcDif",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

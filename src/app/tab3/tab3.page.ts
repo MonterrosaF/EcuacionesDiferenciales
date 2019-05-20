@@ -7,25 +7,26 @@ import * as mathe from 'mathjs'
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-  Q2;
   Q0;
+  t1;
+  i;
   n;
-  ln;
-  nln;
-  pot;
-  Q0pot;
+  Q2;
+  lni;
+  nlni;
+  resultadoE;
+  Q0E;
+  ishidden = true;
 
 
   operacion(){
-    // this.Q2 = mathe.pow(3, 4) 
-    //  this.Q2 = mathe.log(5/3)
-
-    // q2 es igual a q0 por euler a la n por ln 5/2
-    this.ln = (mathe.log(5/2));
-    this.nln = (this.n * this.ln);
-    this.pot = (mathe.pow(mathe.e, this.nln));
-    this.Q0pot = (this.Q0 * this.pot);
-    this.Q2 = this.Q0pot
+    // q2 = q0 por e elevado a la n por ln de i
+    this.ishidden = false;
+    // this.lni = (mathe.log(this.i));
+    // this.nlni = (this.n * this.lni);
+    this.resultadoE = (mathe.pow(this.i, this.n));
+    this.Q0E = (this.Q0 * this.resultadoE);
+    this.Q2 = this.Q0E;
 
   }
 }

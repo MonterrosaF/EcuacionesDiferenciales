@@ -1,9 +1,88 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      DESCRIPCION FORMULA
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>PROBLEMA</ion-card-title>
+      <ion-card-subtitle>Situación:</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Se necesita conocer la cantidad de computadoras que pueden infectarse despues de n cantidad de horas
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>SOLUCIÓN</ion-card-title>
+      <ion-card-subtitle>Descripción:</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Se supone que un virus se propaga con una tasa de crecimiento respecto del tiempo <ion-label color="danger">
+        <b>Q(t)</b></ion-label>; despues de cierta cantidad de tiempo en horas <ion-label color="danger"><b>(t1)</b>
+      </ion-label> el número de computadoras infectadas será <ion-label color="danger"><b>(i)</b></ion-label>, la
+      formula determinará la cantidad de computadoras infectadas despues de n numero de horas viendo el comportamiento
+      de la infección adquirida en (t1).
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>EJEMPLO</ion-card-title>
+      <ion-card-subtitle>Ejemplo propuesto por internet:</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      "Las computadoras del campus en un momento dado (t = 0), una computadora se encuentran infectada por un virus. Si
+      suponemos que el virus se propaga por medio de una memoria USB con una tasa de crecimiento respecto del tiempo Q
+      (t); y en t = 1h (1 hora) el número de computadoras infectadas es 5/3 Q0 (t), determinar la cantidad de
+      computadoras infectadas despues de cuadriplicar el numero de horas"
+
+      <br><br>
+      <hr>
+
+      <i> Tomado del link: https://prezi.com/dzty2ohu5c3e/propagacion-de-un-virus-informatico/ </i>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>FORMULA</ion-card-title>
+      <ion-card-subtitle>Ejemplo propuesto por internet:</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      "Las computadoras del campus en un momento dado (t = 0), una computadora se encuentran infectada por un virus. Si
+      suponemos que el virus se propaga por medio de una memoria USB con una tasa de crecimiento respecto del tiempo Q
+      (t); y en t = 1h (1 hora) el número de computadoras infectadas es 5/3 Q0 (t), determinar la cantidad de
+      computadoras infectadas despues de cuadriplicar el numero de horas"
+
+      <br><br>
+      <hr>
+
+      <i> Tomado del link: https://prezi.com/dzty2ohu5c3e/propagacion-de-un-virus-informatico/ </i>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>SOLUCIÓN</ion-card-title>
+      <ion-card-subtitle>Pasos para solucionar:</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Para realizar la simulación de cuantos computadores van a estar infectados en n cantidad de tiempo, es necesario
+      indicar el numero inicial de computadoras infectadas y la cantidad de computadoras infectadas en (t1), el ultimo
+      dato que debemos colocar es el tiempo final (n) y asi sabremos cuantas computadoras se habrán infectado en (tf)
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" routerLink="/formula">Ir a la formula</ion-button>
+</ion-content>
